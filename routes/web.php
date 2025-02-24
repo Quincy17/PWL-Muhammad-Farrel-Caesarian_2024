@@ -49,6 +49,10 @@ Route::get('/articles/{id}', function($id){
 });
 
 //Membuat Route dengan Optional Parameter
+/*Route::get('/user/{name?}', function($name='null'){
+    return 'Nama Saya '.$name;
+});*/
+
 Route::get('/user/{name?}', function($name='John'){
     return 'Nama Saya '.$name;
 });
