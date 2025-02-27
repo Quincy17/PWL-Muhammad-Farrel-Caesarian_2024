@@ -62,3 +62,16 @@ Route::resource('photos', PhotoController::class)->only([
 Route::resource('photos', PhotoController::class)->except([
         'create', 'store', 'update', 'destroy'
     ]);
+
+//Route view tanpa mnasuk direktori lagi
+/*Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Muhammad Farrel Caesarian']);
+});*/
+
+//Route view dengan memasukkan direktori
+/*Route::get('/greeting', function () {
+    return view('blog.hello', ['name' => 'Muhammad Farrel Caesarian']);
+});*/
+
+//Route untuk menampilkan view dari Controller
+Route::get('/greeting', [WelcomeController::class,'greeting']);
